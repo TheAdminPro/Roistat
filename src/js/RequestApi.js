@@ -3,7 +3,6 @@ import { baseURL } from './config.js'
 class Request{
   static async sendRequest(config = {}){
     const response = await fetch(baseURL + config.module, this.constructOption(config));
-    console.log(response);
     return await response.ok ? response.json() : false;
   }
 
@@ -16,7 +15,6 @@ class Request{
     option.headers = config.headers || {
       'Content-Type': 'application/json'
     }
-    console.log(option);
     return option;
   }
 }

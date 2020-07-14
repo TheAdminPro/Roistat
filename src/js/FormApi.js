@@ -12,7 +12,7 @@ class Form {
   }
   // Get Value From Form's Input
   getValueFields(){
-    const fields = this.form.querySelectorAll('.app-form-control');
+    const fields = this.form.querySelectorAll('.app-form__control');
 
     return [...fields].reduce((acc, field) => {
       acc[field.dataset.type] = field.value.trim();
