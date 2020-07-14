@@ -7,7 +7,62 @@
   <title>Roistat</title>
 </head>
 <body>
-  
-  <script src="../js/main.js"></script>
+  <main class="main">
+    <div class="container">
+      <div class="screen">
+        <div class="screen-header">
+          <div class="screen-header-left">
+            <div class="screen-header__button close"></div>
+            <div class="screen-header__button maximize"></div>
+            <div class="screen-header__button minimize"></div>
+          </div>
+          <div class="screen-header-right">
+            <div class="screen-header__ellipsis"></div>
+            <div class="screen-header__ellipsis"></div>
+            <div class="screen-header__ellipsis"></div>
+          </div>
+        </div>
+        <div class="screen-body">
+          <div class="screen-body__item left">
+            <div class="app-title">
+              <span>CONTACT</span>
+              <span>ROISTAT</span>
+            </div>
+          </div>
+          <div class="screen-body__item">
+            <form class="app-form">
+              <div class="app-form__group">
+                <input class="app-form__control" data-type="first_name" type='text' aria-placeholder="/^\w+/" value="ff" placeholder="имя" >
+              </div>
+              <div class="app-form__group">
+                <input class="app-form__control" data-type="last_name" type='text' aria-placeholder="/^\w+/"  value="ll"  placeholder="фамилия" >
+              </div>
+              <div class="app-form__group">
+                <input class="app-form__control" data-type="phone" type='tel' value="+7 999 444 66 77" aria-pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-|\s?]{0,1}\d{2}[-|\s?]{0,1}\d{2}" placeholder="+7 (ххх) хх-хх" >
+              </div>
+              <div class="app-form__group">
+                <input class="app-form__control" data-type="email" type='email' value="email@email.com" aria-pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="email" >
+              </div>
+              <div class="app-form__group">
+                <input class="app-form__control" data-type="amount" type='text' value="10000" aria-pattern="^[ 0-9]+$" placeholder="сумма сделки" >
+              </div>
+              <div class="app-form__group">
+                <input class="app-form__control" data-type="company" type='text' value="компания" placeholder="компания" >
+              </div>
+              <button class="app-form__button">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- response server -->
+      <div class="response-server">
+        <div class="response-server__content">
+          <div class="response-server__message">
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script type="module" src="../js/main.js"></script>
 </body>
 </html>
